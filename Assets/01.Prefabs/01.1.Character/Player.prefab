@@ -93,7 +93,7 @@ BoxCollider:
   m_GameObject: {fileID: 1856671507}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -159,7 +159,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c9adb9baaa2f8f5409d70dc96f5f379e, type: 2}
+  - {fileID: 2100000, guid: d47ae0396110840289d47476d8289fbf, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -261,12 +261,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 500
   roationSpeed: 0.2
-  zoomSpeed: 0
-  minZoomRange: 0
-  maxZoomRange: 0
   playerInput: {fileID: -944628639613478452, guid: b4da9d44281c1f1438aede0f502d18ac, type: 3}
   rb: {fileID: 855080843}
-  cinemachineFreeLook: {fileID: 0}
 --- !u!114 &855080844
 MonoBehaviour:
   m_ObjectHideFlags: 0

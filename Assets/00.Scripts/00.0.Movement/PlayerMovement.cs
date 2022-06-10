@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     {
         get
         {
-            Vector2 movementInput = playerInput.FindActionMap("Player").FindAction("Move").ReadValue<Vector2>();
+            Vector2 movementInput = moveInputAction.ReadValue<Vector2>();
             return new Vector3(movementInput.x, 0, movementInput.y);
         }
         set
@@ -48,16 +48,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void ApplyInputMovementVector()
     {
-        float targetAngle = Mathf.Atan2(inputMovementVector.x, inputMovementVector.z) * Mathf.Rad2Deg + mainCamera.transform.eulerAngles.y;
-        float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnRotationVelocity, roationSpeed);
-        transform.rotation = Quaternion.Euler(0f, angle, 0f);
+        if (inputMovementVector.magnitude >= 0.1f){
+            float targetAngle = Mathf.Atan2(inputMovementVector.x, inputMovementVector.z) * Mathf.Rad2Deg + mainCamera.transform.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnRotationVelocity, roationSpeed);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
-        Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-        rb.velocity = moveDirection * Time.deltaTime * movementSpeed;
+            Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+            moveDirection.y = 0;
+            rb.velocity = moveDirection.normalized * Time.deltaTime * movementSpeed;
+        }
     }
 
     private void Awake()
     {
+        mainCamera = Camera.main;
         moveInputAction = playerInput.FindActionMap("Player").FindAction("Move");
     }
 }

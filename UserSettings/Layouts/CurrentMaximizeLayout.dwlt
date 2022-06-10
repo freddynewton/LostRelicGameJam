@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 25643
+  controlID: 26552
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 25644
+  controlID: 26529
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 25616
+  controlID: 26530
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -269,8 +269,8 @@ MonoBehaviour:
     y: 0
     width: 888
     height: 561
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 8}
@@ -525,9 +525,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 7.275993, y: 3.909284, z: -8.518171}
+    m_Target: {x: 12.580932, y: -5.6331925, z: -11.39185}
     speed: 2
-    m_Value: {x: 7.275993, y: 3.909284, z: -8.518171}
+    m_Value: {x: 12.580932, y: -5.6331925, z: -11.39185}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -574,9 +574,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.012343157, y: -0.92122674, z: 0.02931262, w: -0.38774568}
+    m_Target: {x: -0.07756988, y: -0.8971056, z: 0.17468037, w: -0.39835837}
     speed: 2
-    m_Value: {x: -0.012343053, y: -0.92121893, z: 0.029312372, w: -0.3877424}
+    m_Value: {x: -0.07756918, y: -0.89709747, z: 0.17467879, w: -0.39835477}
   m_Size:
     m_Target: 10.92025
     speed: 2
@@ -701,21 +701,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/03.Input
+    - Assets/09.PrototypingFiles
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/03.Input
+  - Assets/09.PrototypingFiles
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Game Development\Unity\Unity Repos\LostRelicGameJam
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 23}
-    m_SelectedIDs: da3d0100
-    m_LastClickedID: 81370
+    m_SelectedIDs: fe3c0100
+    m_LastClickedID: 81150
     m_ExpandedIDs: 000000005c350100623501006a350100a43501001c390100563901005a39010000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -769,9 +769,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: dae3feff
-    m_LastClickedInstanceID: -72742
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 2873ffff
+    m_LastClickedInstanceID: -36056
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -889,8 +889,8 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -72742
-  m_LastVerticalScrollValue: 579
+  m_LastInspectedObjectInstanceID: -36056
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
