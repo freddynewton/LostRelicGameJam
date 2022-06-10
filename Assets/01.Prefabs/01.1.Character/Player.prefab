@@ -259,10 +259,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b5158c43d677214cbf9f1bc1a8fee94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
-  roationSpeed: 5
+  movementSpeed: 500
+  roationSpeed: 0.2
+  zoomSpeed: 0
+  minZoomRange: 0
+  maxZoomRange: 0
   playerInput: {fileID: -944628639613478452, guid: b4da9d44281c1f1438aede0f502d18ac, type: 3}
   rb: {fileID: 855080843}
+  cinemachineFreeLook: {fileID: 0}
 --- !u!114 &855080844
 MonoBehaviour:
   m_ObjectHideFlags: 0

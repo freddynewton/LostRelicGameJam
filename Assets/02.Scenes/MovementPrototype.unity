@@ -269,7 +269,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 62
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -294,7 +294,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 470789151}
-  m_LocalRotation: {x: 0.031638563, y: 6.505592e-10, z: 2.0600393e-11, w: 0.9994994}
+  m_LocalRotation: {x: 0.019826064, y: 0.000000001465533, z: 2.9064078e-11, w: 0.9998034}
   m_LocalPosition: {x: 0, y: 2.5, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -428,7 +428,7 @@ Transform:
   m_GameObject: {fileID: 597681951}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 1, z: 3}
+  m_LocalScale: {x: 10, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -479,7 +479,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 40
+    FieldOfView: 62
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -503,7 +503,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 644195082}
-  m_LocalRotation: {x: 0.013500973, y: -0.000000032445364, z: 4.3808407e-10, w: 0.99990886}
+  m_LocalRotation: {x: -0.009964841, y: 0.00000001714198, z: 1.7082562e-10, w: 0.99995035}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -557,7 +557,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 40
+    FieldOfView: 62
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -581,7 +581,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649738569}
-  m_LocalRotation: {x: 0.031638563, y: 5.0288643e-29, z: -4.896321e-30, w: 0.9994994}
+  m_LocalRotation: {x: 0.019826068, y: -1e-45, z: -0, w: 0.9998035}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -762,7 +762,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 40
+    FieldOfView: 62
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -786,8 +786,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824587695}
-  m_LocalRotation: {x: -0.122803636, y: 0.000000027748735, z: 0.0000000034336347, w: 0.99243104}
-  m_LocalPosition: {x: 0, y: -1.346184, z: 1.633158}
+  m_LocalRotation: {x: 0.0498137, y: 0.000000002107731, z: -1.0512439e-10, w: 0.99875855}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1065,6 +1065,7 @@ GameObject:
   - component: {fileID: 2143190041}
   - component: {fileID: 2143190040}
   - component: {fileID: 2143190042}
+  - component: {fileID: 2143190043}
   m_Layer: 0
   m_Name: CM FreeLook1
   m_TagString: Untagged
@@ -1094,7 +1095,7 @@ MonoBehaviour:
   m_Follow: {fileID: 855080841}
   m_CommonLens: 1
   m_Lens:
-    FieldOfView: 40
+    FieldOfView: 62
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -1224,6 +1225,23 @@ MonoBehaviour:
   m_Damping: 0
   m_DampingWhenOccluded: 0
   m_OptimalTargetDistance: 0
+--- !u!114 &2143190043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143190039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23985b53e13e90a4b88ce7ac0df2580a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cinemachineFreeLook: {fileID: 2143190040}
+  playerInput: {fileID: -944628639613478452, guid: b4da9d44281c1f1438aede0f502d18ac, type: 3}
+  zoomSpeed: 0.01
+  minZoomRangeFOV: 50
+  maxZoomRangeFOV: 90
 --- !u!1001 &2967078978140345873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1232,9 +1250,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 855080842, guid: ebe00d0b5b6489446b0f001991195894, type: 3}
-      propertyPath: movementSpeed
-      value: 500
-      objectReference: {fileID: 0}
+      propertyPath: cinemachineFreeLook
+      value: 
+      objectReference: {fileID: 2143190040}
     - target: {fileID: 2967078978975885720, guid: ebe00d0b5b6489446b0f001991195894, type: 3}
       propertyPath: m_RootOrder
       value: 3
