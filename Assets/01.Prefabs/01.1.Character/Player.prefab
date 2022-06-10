@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1856671511}
   - component: {fileID: 1856671510}
   - component: {fileID: 1856671509}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 2967078977904357444}
   - component: {fileID: 2967078977904357445}
   - component: {fileID: 2967078977904357442}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,9 +207,10 @@ GameObject:
   - component: {fileID: 855080843}
   - component: {fileID: 855080842}
   - component: {fileID: 855080844}
-  m_Layer: 0
+  - component: {fileID: 855080845}
+  m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -263,6 +264,7 @@ MonoBehaviour:
   roationSpeed: 0.2
   playerInput: {fileID: -944628639613478452, guid: b4da9d44281c1f1438aede0f502d18ac, type: 3}
   rb: {fileID: 855080843}
+  ropeController: {fileID: 855080845}
 --- !u!114 &855080844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,3 +295,22 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &855080845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2967078978975885721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef6b3d4b2fbcca940a05c4c150d0a016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ropePullBackMovementDisableTimeAmountMS: 1000
+  ropeRange: 12
+  ropeRangePullBackOffset: 4
+  pullBackForceStrength: 30
+  pullBackOffset: {x: 0, y: 2, z: 0}
+  ropeTarget: {fileID: 0}
+  playerRigidbody: {fileID: 855080843}
