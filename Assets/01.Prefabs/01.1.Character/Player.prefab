@@ -342,10 +342,14 @@ MonoBehaviour:
   ropePullBackMovementDisableTimeAmountMS: 1000
   ropeRange: 12
   ropeRangePullBackOffset: 4
-  pullBackForceStrength: 30
-  pullBackOffset: {x: 0, y: 2, z: 0}
-  pullStrength: 10
+  pullBackForceStrength: 60
+  pullBackOffset: {x: 0, y: 1, z: 0}
+  pullStrength: 3
+  ropePullStrenghtStaminaCost: 10
+  ropePullStrengthStaminaMax: 100
+  ropePullStrengthStaminaCurrent: 100
   playerInput: {fileID: -944628639613478452, guid: b4da9d44281c1f1438aede0f502d18ac, type: 3}
   ropeTarget: {fileID: 0}
   playerRigidbody: {fileID: 855080843}
   lizardController: {fileID: 0}
+  playerMovement: {fileID: 855080842}

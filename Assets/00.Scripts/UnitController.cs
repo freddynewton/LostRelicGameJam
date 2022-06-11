@@ -8,6 +8,7 @@ public class UnitController : MonoBehaviour
 
     public void ApplyPullForce(Transform player, float pullForceStregth)
     {
-        rb.AddForce((player.transform.position - transform.position).normalized * pullForceStregth, ForceMode.Force);
+        rb.MovePosition(transform.position + (player.transform.position - transform.position).normalized * pullForceStregth);
+        //rb.AddForce((player.transform.position - transform.position).normalized * pullForceStregth, ForceMode.Force);
     }
 }

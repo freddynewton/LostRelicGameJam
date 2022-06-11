@@ -17,12 +17,16 @@ public class RopeController : MonoBehaviour
 
     [Header("Settings - pull")]
     [SerializeField] private float pullStrength;
+    [SerializeField] private float ropePullStrenghtStaminaCost = 1f;
+    public float ropePullStrengthStaminaMax = 100f;
+    [HideInInspector] public float ropePullStrengthStaminaCurrent = 100f;
 
     [Header("Assigns")]
     [SerializeField] private InputActionAsset playerInput;
     [SerializeField] private GameObject ropeTarget;
     [SerializeField] private Rigidbody playerRigidbody;
     [SerializeField] private UnitController lizardController;
+    [SerializeField] private PlayerMovement playerMovement;
 
     public event Action onPullBackEvent;
 
@@ -30,6 +34,7 @@ public class RopeController : MonoBehaviour
 
     private void Awake()
     {
+        ropePullStrengthStaminaCurrent = ropePullStrengthStaminaMax;
         inputActionFire = playerInput.FindActionMap("Player").FindAction("Fire");
 
 
@@ -41,15 +46,19 @@ public class RopeController : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (CheckPullBackRange())
+        if (CheckPullBackRange() || ropePullStrengthStaminaCurrent <= 0 && playerMovement.canMove)
         {
             onPullBackEvent?.Invoke();
             ApplyPullBackForce();
         }
 
-        if (inputActionFire.IsPressed())
+        if (inputActionFire.IsPressed() && ropePullStrengthStaminaCurrent > 0)
         {
+            ropePullStrengthStaminaCurrent = Mathf.Clamp(ropePullStrengthStaminaCurrent - Time.deltaTime * ropePullStrenghtStaminaCost, 0, ropePullStrengthStaminaMax);
             lizardController.ApplyPullForce(transform, pullStrength);
+        } else
+        {
+            ropePullStrengthStaminaCurrent = Mathf.Clamp(ropePullStrengthStaminaCurrent + Time.deltaTime * ropePullStrenghtStaminaCost, 0, ropePullStrengthStaminaMax);
         }
     }
 

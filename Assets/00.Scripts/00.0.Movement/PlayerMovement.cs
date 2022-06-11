@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private float turnRotationVelocity;
     private Camera mainCamera;
 
-    private bool canMove = true;
+    public bool canMove { get; private set; } = true;
 
     private Vector3 inputMovementVector
     {
