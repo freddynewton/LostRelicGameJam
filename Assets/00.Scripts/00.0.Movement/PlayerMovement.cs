@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
             Vector3 moveDirection = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             moveDirection.y = 0;
-            rb.velocity = moveDirection.normalized * Time.deltaTime * movementSpeed;
+            rb.MovePosition(transform.position + moveDirection.normalized * Time.deltaTime * movementSpeed);
         }
     }
 
