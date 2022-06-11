@@ -82,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         mainCamera = Camera.main;
         moveInputAction = playerInput.FindActionMap("Player").FindAction("Move");
         playerInput.FindActionMap("Player").FindAction("Jump").started += PlayerMovementJump_started;

@@ -55,7 +55,7 @@ public class RopeController : MonoBehaviour
         if (inputActionFire.IsPressed() && ropePullStrengthStaminaCurrent > 0)
         {
             ropePullStrengthStaminaCurrent = Mathf.Clamp(ropePullStrengthStaminaCurrent - Time.deltaTime * ropePullStrenghtStaminaCost, 0, ropePullStrengthStaminaMax);
-            lizardController.ApplyPullForce(transform, pullStrength);
+            lizardController.ApplyPullForce(transform.position, pullStrength);
         } else
         {
             ropePullStrengthStaminaCurrent = Mathf.Clamp(ropePullStrengthStaminaCurrent + Time.deltaTime * ropePullStrenghtStaminaCost, 0, ropePullStrengthStaminaMax);
