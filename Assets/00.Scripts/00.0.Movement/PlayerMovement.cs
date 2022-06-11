@@ -11,10 +11,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float movementSpeed;
     [SerializeField] private float roationSpeed;
 
+    [Header("Jump Settings")]
+    [SerializeField] private float jumpStrength;
+    [SerializeField] private float groundedOffset = -0.1f;
+
     [Header("Assigns")]
     [SerializeField] private InputActionAsset playerInput;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private RopeController ropeController;
+    [SerializeField] private Collider collider;
 
     private InputAction moveInputAction;
     private float turnRotationVelocity;
@@ -36,12 +41,17 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (canMove)
         {
             ApplyInputMovementVector();
         }
+    }
+
+    private bool CheckIfGrounded()
+    {
+        return Physics.Raycast(transform.position, -Vector3.up, collider.bounds.extents.y + groundedOffset);
     }
 
     private void ApplyInputMovementVector()
@@ -74,6 +84,17 @@ public class PlayerMovement : MonoBehaviour
     {
         mainCamera = Camera.main;
         moveInputAction = playerInput.FindActionMap("Player").FindAction("Move");
+        playerInput.FindActionMap("Player").FindAction("Jump").started += PlayerMovementJump_started;
+    }
+
+    private void PlayerMovementJump_started(InputAction.CallbackContext obj)
+    {
+        Debug.Log(CheckIfGrounded());
+
+        if (canMove && CheckIfGrounded())
+        {
+            rb.AddForce(transform.up.normalized * Time.deltaTime * jumpStrength, ForceMode.Impulse);
+        }
     }
 
     private void OnEnable()
@@ -86,5 +107,11 @@ public class PlayerMovement : MonoBehaviour
     {
         ropeController.onPullBackEvent -= OnPulledBack;
         playerInput.Disable();
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, transform.position + Vector3.up * groundedOffset);
     }
 }

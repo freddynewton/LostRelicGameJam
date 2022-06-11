@@ -278,7 +278,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!114 &855080842
 MonoBehaviour:
@@ -294,9 +294,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 10
   roationSpeed: 0.2
+  jumpStrength: 300
+  groundedOffset: 0.1
   playerInput: {fileID: -944628639613478452, guid: b4da9d44281c1f1438aede0f502d18ac, type: 3}
   rb: {fileID: 855080843}
   ropeController: {fileID: 855080845}
+  collider: {fileID: 2967078977904357442}
 --- !u!114 &855080844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,9 +345,9 @@ MonoBehaviour:
   ropePullBackMovementDisableTimeAmountMS: 1000
   ropeRange: 12
   ropeRangePullBackOffset: 4
-  pullBackForceStrength: 60
+  pullBackForceStrength: 50
   pullBackOffset: {x: 0, y: 1, z: 0}
-  pullStrength: 3
+  pullStrength: 0.1
   ropePullStrenghtStaminaCost: 10
   ropePullStrengthStaminaMax: 100
   ropePullStrengthStaminaCurrent: 100
